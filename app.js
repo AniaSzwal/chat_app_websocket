@@ -5,3 +5,4 @@ const addMessageForm = messagesSection.querySelector('#add-messages-form');
 const userNameInput = loginForm.querySelector('#username');
 const messageContentInput = addMessageForm.querySelector('#message-content');
 
+let userName = '';
