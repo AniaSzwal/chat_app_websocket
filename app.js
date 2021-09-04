@@ -7,7 +7,7 @@ const messageContentInput = addMessageForm.querySelector('#message-content');
 
 let userName = '';
 
-//Po wykryciu zdarzenia submit odpala się funkcja login. Funkcja ta przyjmuje inf o evencie oraz blokujr domyślne zachowanie przeglądarki (preventDefault)
+//Dodaj nasłuchiwacz na ten formularz. Po wykryciu zdarzenia submit odpala się funkcja login. Funkcja ta przyjmuje inf o evencie oraz blokujr domyślne zachowanie przeglądarki (preventDefault)
 const login = (event) => {
     event.preventDefault();
     loginForm.addEventListener('submit', login);
