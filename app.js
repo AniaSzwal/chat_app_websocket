@@ -9,7 +9,9 @@ let userName = '';
 
 //Dodaj nasłuchiwacz na ten formularz. Po wykryciu zdarzenia submit odpala się funkcja login. Funkcja ta przyjmuje inf o evencie oraz blokujr domyślne zachowanie przeglądarki (preventDefault)
 const login = (event) => {
-//Dodaj walidację wartości userNameInput. Ma sprawdzać, czy pole nie jest puste. Jeśli tak, należy zwrócić komunikat o błędzie (wystarczy zwykły alert)
+    event.preventDefault();
+//Dodaj walidację wartości userNameInput. (dodaj za userNameInput końcówkę .value - bo walidacja 'wartości').
+// Ma sprawdzać, czy pole nie jest puste. Jeśli tak, należy zwrócić komunikat o błędzie (wystarczy zwykły alert)
     if (userNameInput.value === userName) {
         alert('Please enter Your login')
 //Gdy wszystko w porządku, nasz kod powinien przypisać wartość tego pola do zmiennej userName
@@ -20,8 +22,7 @@ const login = (event) => {
 //pokazać sekcję wiadomości
         messagesSection.classList.add('show');
     }
-    event.preventDefault();
-    loginForm.addEventListener('submit', login);
 }
 
 loginForm.addEventListener('submit', login);
+
