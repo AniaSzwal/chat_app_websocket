@@ -10,7 +10,7 @@ let userName = '';
 //Dodaj nasłuchiwacz na ten formularz. Po wykryciu zdarzenia submit odpala się funkcja login. Funkcja ta przyjmuje inf o evencie oraz blokujr domyślne zachowanie przeglądarki (preventDefault)
 const login = (event) => {
 //Dodaj walidację wartości userNameInput. Ma sprawdzać, czy pole nie jest puste. Jeśli tak, należy zwrócić komunikat o błędzie (wystarczy zwykły alert)
-    if (userNameInput === userName) {
+    if (userNameInput.value === userName) {
         alert('Please enter Your login')
 //Gdy wszystko w porządku, nasz kod powinien przypisać wartość tego pola do zmiennej userName
     } else {
