@@ -17,10 +17,11 @@ const login = (event) => {
         userName = userNameInput.value;
 //schować formularz logowania
         loginForm.classList.remove('show');
-// pokazać sekcję wiadomości
+//pokazać sekcję wiadomości
         messagesSection.classList.add('show');
-
     }
     event.preventDefault();
     loginForm.addEventListener('submit', login);
 }
+
+loginForm.addEventListener('submit', login);
